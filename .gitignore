@@ -1,0 +1,6 @@
+# 本地保留目录：原生 C 层与 ISO 构建不纳入公开仓库
+/native/
+/iso/
+
+# macOS
+.DS_Store
