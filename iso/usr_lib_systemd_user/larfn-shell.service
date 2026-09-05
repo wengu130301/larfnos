@@ -1,0 +1,15 @@
+[Unit]
+Description=LarfnOS Shell (WebKitGTK GUI)
+# 深度融合关键：GUI 会话依赖图形栈与用户会话，按登录会话拉起
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/larfn-shell
+Restart=on-failure
+RestartSec=2
+# 运行在用户的图形会话中（由 display-manager / autologin 会话注入环境）
+Environment=GDK_BACKEND=wayland,x11
+
+[Install]
+WantedBy=graphical-session.target

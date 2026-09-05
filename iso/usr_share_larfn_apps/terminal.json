@@ -1,0 +1,7 @@
+{
+  "id": "terminal",
+  "name": "终端",
+  "svg": "M4 5l6 7-6 7M11 19h9",
+  "exec": "kgx --new-window",
+  "kind": "native"
+}
